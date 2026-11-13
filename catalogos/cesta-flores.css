@@ -1,0 +1,1431 @@
+
+/* ========================================
+   CONFIGURAÇÕES GERAIS
+======================================== */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --rosa-fundo: #fff7f6;
+    --rosa-claro: #fcebea;
+    --rosa-detalhe: #f2d5d2;
+    --dourado: #bd9657;
+    --dourado-escuro: #987443;
+    --texto: #51413d;
+    --texto-claro: #897773;
+    --branco: #ffffff;
+}
+
+body {
+    background: var(--rosa-fundo);
+    color: var(--texto);
+    font-family: 'DM Sans', sans-serif;
+    overflow-x: hidden;
+}
+
+.pagina-cestas {
+    width: 100%;
+    min-height: 100vh;
+}
+
+
+/* ========================================
+   CABEÇALHO
+======================================== */
+
+.cabecalho-cestas {
+    width: 100%;
+    min-height: 125px;
+    padding: 15px 5%;
+    display: grid;
+    grid-template-columns: 1fr auto 1fr;
+    align-items: center;
+
+    background: linear-gradient(
+        135deg,
+        #fff3f2,
+        #fffafa,
+        #fff6f4
+    );
+
+    border-bottom: 1px solid rgba(189, 150, 87, 0.25);
+}
+
+.logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo img {
+    width: 155px;
+    max-height: 105px;
+    object-fit: contain;
+}
+
+.voltar {
+    justify-self: start;
+    text-decoration: none;
+    color: var(--dourado-escuro);
+    font-size: 13px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+.voltar:hover {
+    color: var(--dourado);
+    transform: translateX(-3px);
+}
+
+.espaco-cabecalho {
+    width: 100%;
+}
+
+
+/* ========================================
+   APRESENTAÇÃO
+======================================== */
+
+.introducao {
+    text-align: center;
+    padding: 85px 20px 65px;
+
+    background: radial-gradient(
+        ellipse at top,
+        rgba(242, 213, 210, 0.38),
+        transparent 70%
+    );
+}
+
+.linha-dourada {
+    display: block;
+    width: 55px;
+    height: 1px;
+    background: var(--dourado);
+    margin: 0 auto 22px;
+}
+
+.subtitulo {
+    color: var(--dourado-escuro);
+    font-size: 11px;
+    letter-spacing: 3px;
+    font-weight: 600;
+    margin-bottom: 16px;
+}
+
+.introducao h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(34px, 5vw, 49px);
+    font-weight: 500;
+    color: #76564d;
+    margin-bottom: 18px;
+}
+
+.descricao {
+    max-width: 570px;
+    margin: 0 auto;
+    color: var(--texto-claro);
+    font-size: 15px;
+    line-height: 1.8;
+}
+
+.detalhe-floral {
+    display: block;
+    color: var(--dourado);
+    font-size: 22px;
+    margin-top: 27px;
+}
+
+
+/* ========================================
+   TÍTULOS DAS SEÇÕES
+======================================== */
+
+.titulo-secao {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 22px;
+    margin-bottom: 45px;
+}
+
+.titulo-secao span {
+    display: block;
+    width: 45px;
+    height: 1px;
+    background: var(--dourado);
+    opacity: 0.65;
+}
+
+.titulo-secao h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 29px;
+    font-weight: 500;
+    color: #76564d;
+}
+
+
+/* ========================================
+   TEXTOS DAS SEÇÕES
+======================================== */
+
+.texto-especiais,
+.texto-secao,
+.texto-cardapio {
+    text-align: center;
+    color: var(--texto-claro);
+    font-size: 14px;
+    line-height: 1.7;
+    margin-top: -25px;
+    margin-bottom: 50px;
+}
+
+
+/* ========================================
+   OPÇÕES ESPECIAIS
+======================================== */
+
+.secao-especiais {
+    padding: 80px 7% 90px;
+    background: #fffaf7;
+}
+
+.grade-especiais {
+    max-width: 1000px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 75px;
+    align-items: start;
+}
+
+/* PRODUTOS ESPECIAIS */
+
+.produto-especial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+
+    padding: 0 10px;
+
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+
+    transition: transform 0.3s;
+}
+
+.produto-especial:hover {
+    transform: translateY(-3px);
+    box-shadow: none;
+}
+
+/* IMAGENS ESPECIAIS */
+
+.imagem-especial {
+    order: 1;
+
+    width: 290px;
+    height: 290px;
+    max-width: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    border-radius: 50%;
+
+    background: #fffdf0;
+    border: 1px solid rgba(189, 150, 87, 0.45);
+
+    padding: 10px;
+    margin-bottom: 22px;
+
+    box-shadow: 0 12px 35px rgba(130, 91, 69, 0.10);
+
+    flex-shrink: 0;
+}
+
+.imagem-especial img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: transform 0.5s ease;
+}
+
+.produto-especial:hover .imagem-especial img {
+    transform: scale(1.06);
+}
+
+/* ETIQUETA LINHA LUXO */
+
+.etiqueta-especial {
+    order: 2;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    min-height: 29px;
+
+    color: var(--dourado-escuro);
+    border: 1px solid rgba(189, 150, 87, 0.55);
+    border-radius: 30px;
+
+    padding: 7px 17px;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+
+    margin-bottom: 15px;
+}
+
+/* INFORMAÇÕES DOS ESPECIAIS */
+
+.informacoes-especial {
+    order: 3;
+
+    width: 100%;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.informacoes-especial h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 23px;
+    font-weight: 500;
+    color: #76564d;
+
+    max-width: 370px;
+    min-height: 64px;
+
+    line-height: 1.4;
+
+    margin-bottom: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.informacoes-especial p {
+    color: var(--texto-claro);
+    font-size: 14px;
+    line-height: 1.7;
+
+    max-width: 330px;
+    min-height: 48px;
+
+    margin-bottom: 15px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.preco-especial {
+    display: block;
+
+    color: var(--dourado-escuro);
+    font-size: 19px;
+    font-weight: 700;
+
+    margin: 5px 0 20px;
+}
+
+/* BOTÃO DOS ESPECIAIS */
+
+.botao-especial {
+    display: inline-block;
+
+    border: none;
+    border-radius: 30px;
+
+    background: var(--dourado);
+    color: var(--branco);
+
+    padding: 13px 25px;
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 600;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-especial:hover {
+    background: var(--dourado-escuro);
+    color: var(--branco);
+
+    transform: translateY(-3px);
+
+    box-shadow: 0 8px 20px rgba(152, 116, 67, 0.2);
+}
+
+
+/* ========================================
+   NOSSAS QUERIDINHAS
+======================================== */
+
+.secao-queridinhas {
+    padding: 80px 7% 90px;
+    background: #fffafa;
+}
+
+.grade-queridinhas {
+    max-width: 950px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+
+    gap: 35px;
+    justify-items: center;
+}
+
+.produto-queridinha {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-width: 0;
+}
+
+/* IMAGENS DAS QUERIDINHAS */
+
+.imagem-queridinha {
+    width: 190px;
+    height: 190px;
+    max-width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    overflow: hidden;
+    border-radius: 50%;
+
+    background: transparent;
+    border: 1px solid rgba(189, 150, 87, 0.45);
+
+    padding: 4px;
+    margin-bottom: 20px;
+}
+
+.imagem-queridinha img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    border-radius: 50%;
+    transition: transform 0.4s ease;
+}
+
+.produto-queridinha:hover .imagem-queridinha img {
+    transform: scale(1.05);
+}
+
+.imagem-reservada {
+    color: var(--dourado-escuro);
+    font-family: 'Playfair Display', serif;
+    font-size: 13px;
+    text-align: center;
+    padding: 10px;
+    opacity: 0.75;
+}
+
+.informacoes-queridinha h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    font-weight: 500;
+    color: #76564d;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+.informacoes-queridinha p {
+    color: var(--texto-claro);
+    font-size: 13px;
+    line-height: 1.5;
+    margin-bottom: 9px;
+}
+
+.preco-queridinha {
+    display: block;
+    color: var(--dourado-escuro);
+    font-size: 16px;
+    font-weight: 700;
+    margin-bottom: 10px;
+}
+
+.botao-queridinha {
+    border: none;
+    background: none;
+    color: var(--dourado-escuro);
+
+    font-family: 'DM Sans', sans-serif;
+    font-size: 12px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-queridinha:hover {
+    color: #c18b42;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   NOSSO CATÁLOGO
+======================================== */
+
+.cardapio {
+    padding: 80px 7% 100px;
+    background: #fff0ef;
+}
+
+.grade-produtos {
+    max-width: 1150px;
+    margin: 0 auto;
+
+    display: grid;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+
+    column-gap: 55px;
+    row-gap: 45px;
+}
+
+.produto {
+    display: flex;
+    align-items: center;
+    gap: 22px;
+
+    padding: 15px 0;
+
+    border-bottom: 1px solid rgba(189, 150, 87, 0.22);
+    transition: 0.3s;
+}
+
+
+/* IMAGENS DO CATÁLOGO */
+
+.imagem-produto {
+    width: 155px;
+    height: 155px;
+    flex-shrink: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    overflow: hidden;
+    border-radius: 18px;
+    background: #fffdf0;
+}
+
+.imagem-produto img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    transition: transform 0.4s ease;
+}
+
+.produto:hover .imagem-produto img {
+    transform: scale(1.06);
+}
+
+
+/* INFORMAÇÕES DO CATÁLOGO */
+
+.informacoes-produto {
+    flex: 1;
+    min-width: 0;
+}
+
+.informacoes-produto h3 {
+    font-family: 'Playfair Display', serif;
+    color: #76564d;
+    font-size: 19px;
+    font-weight: 500;
+    line-height: 1.4;
+    margin-bottom: 9px;
+}
+
+.informacoes-produto p {
+    color: var(--texto-claro);
+    font-size: 13px;
+    line-height: 1.6;
+    margin-bottom: 10px;
+}
+
+.preco {
+    display: block;
+    color: var(--dourado-escuro);
+    font-size: 17px;
+    font-weight: 700;
+    margin: 0 0 12px;
+}
+
+
+/* BOTÕES */
+
+.botao-consultar {
+    border: none;
+    background: none;
+
+    color: var(--dourado-escuro);
+    font-family: 'DM Sans', sans-serif;
+    font-size: 13px;
+    font-weight: 700;
+
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.botao-consultar:hover {
+    color: #c18b42;
+    transform: translateX(4px);
+}
+
+
+/* ========================================
+   MODAL
+======================================== */
+
+.modal-produto {
+    position: fixed;
+    inset: 0;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 25px;
+
+    background: rgba(48, 32, 30, 0.58);
+    backdrop-filter: blur(5px);
+
+    opacity: 0;
+    visibility: hidden;
+    transition: 0.3s ease;
+}
+
+.modal-produto.aberto {
+    opacity: 1;
+    visibility: visible;
+}
+
+.conteudo-modal {
+    position: relative;
+    width: 100%;
+    max-width: 850px;
+    max-height: 90vh;
+
+    display: grid;
+    grid-template-columns: 0.9fr 1.1fr;
+
+    background: #fffaf9;
+    border-radius: 20px;
+    overflow-y: auto;
+
+    box-shadow: 0 20px 70px rgba(0, 0, 0, 0.2);
+
+    transform: translateY(20px);
+    transition: 0.3s ease;
+}
+
+.modal-produto.aberto .conteudo-modal {
+    transform: translateY(0);
+}
+
+.fechar-modal {
+    position: absolute;
+    top: 13px;
+    right: 17px;
+    z-index: 5;
+
+    width: 38px;
+    height: 38px;
+
+    border: none;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.9);
+
+    color: #795c59;
+    font-size: 27px;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.fechar-modal:hover {
+    background: #f4dedb;
+    transform: rotate(90deg);
+}
+
+.modal-imagem {
+    min-height: 480px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: #fdf9ed;
+    overflow: hidden;
+}
+
+.modal-imagem img {
+    width: 100%;
+    height: 100%;
+    min-height: 480px;
+    object-fit: contain;
+    display: block;
+}
+
+.modal-informacoes {
+    padding: 45px 35px 35px;
+}
+
+.modal-etiqueta {
+    color: var(--dourado-escuro);
+    font-size: 10px;
+    letter-spacing: 2px;
+    font-weight: 700;
+}
+
+.modal-informacoes h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 29px;
+    font-weight: 500;
+    line-height: 1.3;
+    color: #76564d;
+    margin-top: 12px;
+}
+
+.modal-preco {
+    display: block;
+    color: var(--dourado-escuro);
+    font-size: 23px;
+    margin: 13px 0;
+}
+
+.modal-descricao,
+.modal-detalhes {
+    color: var(--texto-claro);
+    font-size: 13px;
+    line-height: 1.7;
+    white-space: pre-line;
+}
+
+.divisor-modal {
+    width: 100%;
+    height: 1px;
+    background: rgba(189, 150, 87, 0.3);
+    margin: 23px 0;
+}
+
+.modal-informacoes h3 {
+    font-family: 'Playfair Display', serif;
+    color: #76564d;
+    font-size: 20px;
+    font-weight: 500;
+    margin-bottom: 16px;
+}
+
+.modal-whatsapp {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    width: 100%;
+    margin-top: 23px;
+    padding: 15px 20px;
+
+    background: #bd9680;
+    color: white;
+    border-radius: 30px;
+
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 700;
+    transition: 0.3s;
+}
+
+.modal-whatsapp:hover {
+    background: #987443;
+    transform: translateY(-2px);
+}
+
+
+/* ========================================
+   RODAPÉ
+======================================== */
+
+.rodape-cestas {
+    background: #f8e8e5;
+    padding: 55px 20px 30px;
+    text-align: center;
+}
+
+.flor-rodape {
+    display: block;
+    color: var(--dourado);
+    font-size: 25px;
+    margin-bottom: 15px;
+}
+
+.rodape-cestas h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 27px;
+    font-weight: 500;
+    color: #76564d;
+    margin-bottom: 10px;
+}
+
+.rodape-cestas p {
+    color: var(--texto-claro);
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.rodape-cestas a {
+    display: inline-block;
+    color: var(--dourado-escuro);
+    text-decoration: none;
+    font-size: 13px;
+    font-weight: 600;
+    margin-bottom: 35px;
+    transition: 0.3s;
+}
+
+.rodape-cestas a:hover {
+    color: #c18b42;
+}
+
+.rodape-cestas small {
+    display: block;
+    color: #a28d85;
+    font-size: 11px;
+    border-top: 1px solid rgba(189, 150, 87, 0.2);
+    padding-top: 20px;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media (max-width: 900px) {
+
+    .grade-especiais {
+        gap: 35px;
+    }
+
+    .imagem-especial {
+        width: 240px;
+        height: 240px;
+    }
+
+    .grade-queridinhas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 600px;
+        row-gap: 45px;
+    }
+
+    .imagem-queridinha {
+        width: 165px;
+        height: 165px;
+    }
+
+    .grade-produtos {
+        column-gap: 30px;
+    }
+
+    .produto {
+        gap: 15px;
+    }
+
+    .imagem-produto {
+        width: 125px;
+        height: 125px;
+    }
+}
+
+
+/* ========================================
+   CELULAR
+======================================== */
+
+@media (max-width: 650px) {
+
+    /* CABEÇALHO */
+
+    .cabecalho-cestas {
+        min-height: 90px;
+        padding: 10px 5%;
+    }
+
+    .logo img {
+        width: 105px;
+        max-height: 75px;
+    }
+
+    .voltar {
+        font-size: 0;
+    }
+
+    .voltar::before {
+        content: "←";
+        font-size: 21px;
+        color: var(--dourado-escuro);
+    }
+
+
+    /* APRESENTAÇÃO */
+
+    .introducao {
+        padding: 55px 22px 45px;
+    }
+
+    .subtitulo {
+        font-size: 9px;
+        letter-spacing: 2px;
+    }
+
+    .introducao h1 {
+        font-size: 36px;
+    }
+
+    .descricao {
+        font-size: 14px;
+    }
+
+
+    /* TÍTULOS */
+
+    .titulo-secao {
+        gap: 12px;
+        margin-bottom: 35px;
+    }
+
+    .titulo-secao span {
+        width: 25px;
+    }
+
+    .titulo-secao h2 {
+        font-size: 24px;
+    }
+
+
+    /* TEXTOS */
+
+    .texto-especiais,
+    .texto-secao,
+    .texto-cardapio {
+        font-size: 13px;
+        line-height: 1.6;
+        margin-top: -18px;
+        margin-bottom: 35px;
+    }
+
+
+    /* OPÇÕES ESPECIAIS */
+
+    .secao-especiais {
+        padding: 40px 20px 65px;
+    }
+
+    .grade-especiais {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 55px;
+    }
+
+    .produto-especial {
+        padding: 0 10px;
+        background: transparent;
+        border: none;
+        box-shadow: none;
+    }
+
+    .imagem-especial {
+        width: 255px;
+        height: 255px;
+        margin-bottom: 22px;
+    }
+
+    .informacoes-especial h3 {
+        font-size: 22px;
+        min-height: auto;
+    }
+
+    .informacoes-especial p {
+        min-height: auto;
+    }
+
+
+    /* QUERIDINHAS */
+
+    .secao-queridinhas {
+        padding: 55px 20px 65px;
+    }
+
+    .grade-queridinhas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 25px;
+        width: 100%;
+    }
+
+    .produto-queridinha {
+        width: 100%;
+        max-width: 100%;
+        margin: 0 auto;
+    }
+
+    .imagem-queridinha {
+        width: 135px;
+        height: 135px;
+        max-width: 100%;
+        margin-bottom: 15px;
+        border-radius: 50%;
+    }
+
+    .imagem-queridinha img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+    }
+
+    .informacoes-queridinha h3 {
+        font-size: 16px;
+    }
+
+    .informacoes-queridinha p {
+        font-size: 12px;
+    }
+
+    .preco-queridinha {
+        font-size: 15px;
+    }
+
+
+    /* CATÁLOGO */
+
+    .cardapio {
+        padding: 55px 20px 70px;
+    }
+
+    .grade-produtos {
+        grid-template-columns: 1fr;
+        row-gap: 25px;
+    }
+
+    .produto {
+        gap: 15px;
+        padding: 12px 0 20px;
+    }
+
+    .imagem-produto {
+        width: 115px;
+        height: 115px;
+        border-radius: 15px;
+    }
+
+    .informacoes-produto h3 {
+        font-size: 17px;
+    }
+
+    .informacoes-produto p {
+        font-size: 12px;
+    }
+
+    .informacoes-produto .preco {
+        font-size: 16px;
+    }
+
+    .botao-consultar {
+        font-size: 12px;
+    }
+
+
+    /* MODAL */
+
+    .modal-produto {
+        padding: 12px;
+    }
+
+    .conteudo-modal {
+        max-width: 430px;
+        max-height: 92vh;
+        grid-template-columns: 1fr;
+        border-radius: 17px;
+    }
+
+    .modal-imagem {
+        min-height: 250px;
+        height: 250px;
+    }
+
+    .modal-imagem img {
+        min-height: 250px;
+        height: 250px;
+    }
+
+    .modal-informacoes {
+        padding: 25px 23px;
+    }
+
+    .modal-informacoes h2 {
+        font-size: 25px;
+        padding-right: 20px;
+    }
+
+    .modal-preco {
+        font-size: 21px;
+    }
+
+
+    /* RODAPÉ */
+
+    .rodape-cestas {
+        padding: 45px 20px 25px;
+    }
+}
+
+
+/* ========================================
+   TELAS PEQUENAS
+======================================== */
+
+@media (max-width: 380px) {
+
+    .imagem-especial {
+        width: 220px;
+        height: 220px;
+    }
+
+    .imagem-queridinha {
+        width: 115px;
+        height: 115px;
+    }
+
+    .imagem-produto {
+        width: 95px;
+        height: 95px;
+    }
+
+    .produto {
+        gap: 12px;
+    }
+
+    .informacoes-produto h3 {
+        font-size: 15px;
+    }
+
+    .informacoes-produto p {
+        font-size: 11px;
+    }
+}
+
+
+/* ========================================
+   TÍTULO DAS QUERIDINHAS - CELULAR
+======================================== */
+
+@media (max-width: 600px) {
+
+    .secao-queridinhas h2 {
+        width: 100%;
+        text-align: center;
+        white-space: nowrap;
+        font-size: clamp(20px, 5.5vw, 26px);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+/* ========================================
+   CORREÇÃO DAS OPÇÕES ESPECIAIS
+======================================== */
+
+.produto-especial {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    position: relative;
+    text-align: center;
+    gap: 0;
+}
+
+.produto-especial .imagem-especial {
+    order: 1;
+    position: relative;
+    flex-shrink: 0;
+    margin: 0 0 22px;
+}
+
+.produto-especial .etiqueta-especial {
+    order: 2;
+    position: relative;
+    margin: 0 0 15px;
+}
+
+.produto-especial h3 {
+    order: 3;
+    position: relative;
+    margin: 0 0 12px;
+}
+
+.produto-especial p {
+    order: 4;
+    position: relative;
+    margin: 0 0 15px;
+}
+
+.produto-especial .preco-especial {
+    order: 5;
+    position: relative;
+    margin: 5px 0 20px;
+}
+
+.produto-especial .botao-especial {
+    order: 6;
+    position: relative;
+    margin: 0;
+}
+
+/* ========================================
+   ALINHAMENTO DAS QUERIDINHAS
+======================================== */
+
+.grade-queridinhas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    justify-items: center;
+    align-items: start;
+    gap: 35px;
+}
+
+.produto-queridinha {
+    width: 100%;
+    max-width: 220px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.imagem-queridinha {
+    margin-left: auto;
+    margin-right: auto;
+    flex-shrink: 0;
+}
+
+.informacoes-queridinha {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.informacoes-queridinha h3,
+.informacoes-queridinha p {
+    width: 100%;
+    text-align: center;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .grade-queridinhas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 650px) {
+    .grade-queridinhas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .produto-queridinha {
+        width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
+    }
+
+    .informacoes-queridinha {
+        width: 100%;
+    }
+}
+
+/* ========================================
+   ALINHAMENTO DOS 4 CARDS QUERIDINHAS
+======================================== */
+
+.grade-queridinhas {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    align-items: stretch;
+    justify-items: center;
+    gap: 35px;
+}
+
+.produto-queridinha {
+    width: 100%;
+    max-width: 220px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+    height: 100%;
+}
+
+.imagem-queridinha {
+    flex-shrink: 0;
+    margin-bottom: 20px;
+}
+
+.informacoes-queridinha {
+    width: 100%;
+    flex: 1;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.informacoes-queridinha h3 {
+    width: 100%;
+    min-height: 52px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.informacoes-queridinha p {
+    width: 100%;
+    min-height: 78px;
+
+    display: flex;
+    align-items: flex-start;
+    justify-content: center;
+
+    text-align: center;
+}
+
+.preco-queridinha {
+    margin-top: auto;
+    margin-bottom: 10px;
+}
+
+.botao-queridinha {
+    margin-top: 0;
+}
+
+/* TABLET */
+
+@media (max-width: 900px) {
+    .grade-queridinhas {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+/* CELULAR */
+
+@media (max-width: 650px) {
+    .grade-queridinhas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 35px;
+    }
+
+    .produto-queridinha {
+        max-width: 400px;
+        height: auto;
+    }
+
+    .informacoes-queridinha h3 {
+        min-height: auto;
+    }
+
+    .informacoes-queridinha p {
+        min-height: auto;
+    }
+
+    .preco-queridinha {
+        margin-top: 0;
+    }
+}
+
+/* ========================================
+   CENTRALIZAR O ÚLTIMO PRODUTO DO CATÁLOGO
+======================================== */
+
+@media (min-width: 651px) {
+
+    .grade-produtos .produto:last-child:nth-child(odd) {
+        grid-column: 1 / -1;
+        width: calc(50% - 27.5px);
+        justify-self: center;
+    }
+
+}
+
+/* ========================================
+   AUMENTAR AS IMAGENS DAS QUERIDINHAS
+======================================== */
+
+.imagem-queridinha {
+    width: 190px;
+    height: 190px;
+    border-radius: 50%;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.imagem-queridinha img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 50%;
+}
+
+/* CELULAR */
+
+@media (max-width: 650px) {
+    .imagem-queridinha {
+        width: 170px;
+        height: 170px;
+    }
+}

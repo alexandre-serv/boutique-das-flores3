@@ -1,0 +1,195 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Cestas com Flores | Boutique das Flores</title>
+
+    <!-- FONTES -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="cesta-flores.css">
+
+    <!-- JAVASCRIPT -->
+    <script src="cesta-flores.js" defer></script>
+</head>
+
+<body>
+
+    <main class="pagina-cestas">
+
+        <!-- CABEÇALHO -->
+        <header class="cabecalho-cestas">
+
+            <a href="../index.html" class="voltar">
+                ← Página inicial
+            </a>
+
+            <a href="../index.html" class="logo">
+                <img src="../boutique_das_flores_logo_dourada.png" alt="Boutique das Flores">
+            </a>
+
+            <div class="espaco-cabecalho"></div>
+
+        </header>
+
+
+        <!-- APRESENTAÇÃO -->
+        <section class="introducao">
+
+            <span class="linha-dourada"></span>
+
+            <p class="subtitulo">
+                PRESENTES QUE FLORESCEM EM CARINHO
+            </p>
+
+            <h1>Cestas com Flores</h1>
+
+            <p class="descricao">
+                Combinações especiais de flores e presentes para
+                transformar momentos em lembranças inesquecíveis.
+            </p>
+
+            <span class="detalhe-floral">✦</span>
+
+        </section>
+
+
+        <!-- OPÇÕES ESPECIAIS -->
+        <section class="secao-especiais">
+
+            <div class="titulo-secao">
+                <span></span>
+                <h2>Opções Especiais</h2>
+                <span></span>
+            </div>
+
+            <p class="texto-especiais">
+                Uma seleção exclusiva de presentes sofisticados
+                para momentos verdadeiramente especiais.
+            </p>
+
+            <div class="grade-especiais" id="gradeEspeciais">
+                <!-- Os 2 produtos de luxo serão carregados pelo JavaScript -->
+            </div>
+
+        </section>
+
+
+        <!-- NOSSAS QUERIDINHAS -->
+        <section class="secao-queridinhas">
+
+            <div class="titulo-secao">
+                <span></span>
+                <h2>Nossas Queridinhas</h2>
+                <span></span>
+            </div>
+
+            <p class="texto-secao">
+                As nossas escolhas favoritas, cheias de beleza e carinho.
+            </p>
+
+            <div class="grade-queridinhas" id="gradeQueridinhas">
+                <!-- Os 4 produtos serão carregados pelo JavaScript -->
+            </div>
+
+        </section>
+
+
+        <!-- NOSSO CATÁLOGO -->
+        <section class="cardapio">
+
+            <div class="titulo-secao">
+                <span></span>
+                <h2>Nosso Catálogo</h2>
+                <span></span>
+            </div>
+
+            <p class="texto-cardapio">
+                Conheça todas as outras opções de cestas com flores
+                disponíveis em nossa boutique.
+            </p>
+
+            <div class="grade-produtos" id="gradeProdutos">
+                <!-- Os 7 produtos restantes serão carregados pelo JavaScript -->
+            </div>
+
+        </section>
+
+
+        <!-- JANELA DE DETALHES -->
+        <div class="modal-produto" id="modalProduto" aria-hidden="true">
+
+            <div class="conteudo-modal" role="dialog" aria-modal="true" aria-labelledby="modalNome">
+
+                <button class="fechar-modal" id="fecharModal" aria-label="Fechar janela">
+                    &times;
+                </button>
+
+                <div class="modal-imagem" id="modalAreaImagem">
+                    <span>Foto do produto</span>
+                </div>
+
+                <div class="modal-informacoes">
+
+                    <span class="modal-etiqueta">BOUTIQUE DAS FLORES</span>
+
+                    <h2 id="modalNome"></h2>
+
+                    <strong class="modal-preco" id="modalPreco"></strong>
+
+                    <p class="modal-descricao" id="modalDescricao"></p>
+
+                    <div class="divisor-modal"></div>
+
+                    <h3>Detalhes do produto</h3>
+
+                    <p class="modal-detalhes" id="modalDetalhes"></p>
+
+                    <a
+                        href="#"
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        class="modal-whatsapp"
+                        id="modalWhatsApp">
+
+                        Consultar pelo WhatsApp
+
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <!-- RODAPÉ -->
+        <footer class="rodape-cestas">
+
+            <span class="flor-rodape">✦</span>
+
+            <h2>Boutique das Flores</h2>
+
+            <p>Presentes especiais, feitos com carinho.</p>
+
+            <a href="../index.html">Voltar para a página inicial</a>
+
+            <small>
+                © 2026 Boutique das Flores - Todos os direitos reservados.
+            </small>
+
+        </footer>
+
+    </main>
+
+</body>
+
+</html>
